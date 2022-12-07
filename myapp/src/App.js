@@ -1,15 +1,16 @@
+
 import './App.css';
 import ListingPokemon from "./Pages/listingPokemon";
 import ManagePokemon from "./Pages/managePokemon";
-import Pokedex from "./Pages/pokedex";
+import Pokedex from "./Pages/pokedex.js";
 import Home from "./Pages/home";
 import {
   BrowserRouter as Router,
   Switch,
   Link,
   Route,
-} from "react-router-dom";
-
+  } from "react-router-dom";
+    
 function App(props) {
   return <Router>
       <div>
@@ -37,6 +38,5 @@ function App(props) {
       </Switch>
   </Router> 
 }
-fg
-export default App;
 
+export default App;
