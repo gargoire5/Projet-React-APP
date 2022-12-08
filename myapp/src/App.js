@@ -1,8 +1,7 @@
 import './App.css';
 import ListingPokemon from "./Pages/listingPokemon";
 import ManagePokemon from "./Pages/managePokemon";
-import Pokedex from "./Pages/pokedex.js";
-import Home from "./Pages/home";
+import Pokedex from "./Pages/pokedex";
 import {
   BrowserRouter as Router,
   Switch,
@@ -22,9 +21,6 @@ function App(props) {
         </nav>
       </div>
       <Switch>
-        <Route exact path="/"> {/*ici on met l'URL dans le navigateur*/}
-          <Home /> {/*ici on donne la page à afficher en fonction de cette URL*/}
-        </Route>
         <Route path="/ListingPokemon">
           <ListingPokemon />
         </Route>
