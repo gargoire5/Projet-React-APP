@@ -1,4 +1,3 @@
-
 import './App.css';
 import ListingPokemon from "./Pages/listingPokemon";
 import ManagePokemon from "./Pages/managePokemon";
