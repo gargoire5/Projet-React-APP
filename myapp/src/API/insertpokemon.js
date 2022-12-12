@@ -1,4 +1,4 @@
-export const insert = async () => {
+export const data = async () => {
     const response = await fetch(
         'http://localhost:4444/pokemon/insert', {
             method: 'POST', 

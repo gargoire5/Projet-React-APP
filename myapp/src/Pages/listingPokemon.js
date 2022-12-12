@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAll } from "../API/pokemon";
+import { AddToPokedex } from "../API/addpokedex";
 
 
 function ListingPokemon(props){
@@ -14,7 +15,7 @@ function ListingPokemon(props){
         .catch(error=>console.error("Erreur avec notre API :",error.message));
     },[]);
     return <div className="pokemon-list">
-        <div class="flex">
+        <div className="flex">
         {
             pokemons.map((pokemon,key) =>{
             return <div key={key} className="bloc-pokemon">
@@ -22,7 +23,7 @@ function ListingPokemon(props){
                 <h2>{pokemon.name}</h2>
                 <h2>{pokemon.type1}</h2>
                 <h2>{pokemon.type2}</h2>
-                <button onClick={()=>addToPokedex(pokemon._id)}>Capturer !</button>
+                <button onClick={()=>AddToPokedex(pokemon)}>Capturer !</button>
             </div>
             })
         }
