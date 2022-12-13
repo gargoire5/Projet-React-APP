@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import { GetAll } from "../API/pokedex";
+import './listingPokemon.css';
+import React from "react";
+import { Grid, Segment } from "semantic-ui-react";
+import 'semantic-ui-css/semantic.min.css'
 
 
 function Pokedex(props){
@@ -13,19 +17,20 @@ function Pokedex(props){
         .then(result => setPokemons(result))
         .catch(error=>console.error("Erreur avec notre API :",error.message));
     },[]);
-    return <div className="pokemon-list">
-        <div className="flex">
+    return (<Grid container columns={3}  >
         {
             pokemons.map((pokemon,key) =>{
-            return <div key={key} className="bloc-pokemon">
-                <img className="avatar" src={pokemon.img} />
-                <h2>{pokemon.name}</h2>
-                <h2>{pokemon.type1}</h2>
-                <h2>{pokemon.type2}</h2>
-            </div>
+            return <Grid.Column container>  
+                    <Segment key={key}>
+                    <h1>{pokemon.name}</h1>
+                    <img className="avatar" src={pokemon.img} />
+                    
+                    <h2><img className="avatarp" src={pokemon.imgtype1} />{pokemon.type1}</h2>
+                    <h2><img  className="avatarp" src={pokemon.imgtype2} />{pokemon.type2}</h2>
+                </Segment>
+                </Grid.Column>
             })
         }
-        </div>
-    </div>;
+    </Grid>) 
 }
 export default Pokedex;

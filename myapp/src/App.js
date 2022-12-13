@@ -1,4 +1,5 @@
 import './App.css';
+import 'semantic-ui-css/semantic.min.css'
 import ListingPokemon from "./Pages/listingPokemon";
 import ManagePokemon from "./Pages/managePokemon";
 import Pokedex from "./Pages/pokedex";

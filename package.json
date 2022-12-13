@@ -23,6 +23,8 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-hook-form": "^7.40.0",
-    "react-router-dom": "^5.3.4"
+    "react-router-dom": "^5.3.4",
+    "semantic-ui-css": "^2.5.0",
+    "semantic-ui-react": "^2.1.4"
   }
 }
