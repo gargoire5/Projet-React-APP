@@ -27,10 +27,10 @@ function ListingPokemon(props){
                     return <Grid.Column container>
                             <Segment key={key}>
                                 <h1>{pokemon.name}</h1>
-                                <img className="avatar" src={pokemon.img} />
+                                <img className="avatard" src={pokemon.img} />
                                 <h2><img  className="avatarp" src={pokemon.imgtype1} />{pokemon.type1}</h2>
                                 <h2><img  className="avatarp" src={pokemon.imgtype2} />{pokemon.type2}</h2>
-                                <button onClick={()=>AddToPokedex(pokemon)}><img className="pokeball"  src="https://img.icons8.com/color/512/pokeball-2.png"></img></button>
+                                <button onClick={()=>AddToPokedex(pokemon)}><img className="pokeball"  src="https://img.icons8.com/color/512/pokeball-2.png"/></button>
                             </Segment>
                         </Grid.Column>        
 
