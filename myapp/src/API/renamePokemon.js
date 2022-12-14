@@ -1,15 +1,14 @@
-export const DeletePokemon =  async (pokemon) => {
-    console.log('Got body_delete:', pokemon.name, pokemon._id);
+export const RenamePokemon = async (pokemon, newname) => {
     const response = await fetch(
-        'http://localhost:4444/pokemon/delete', {
-            method: 'DELETE', 
+        'http://localhost:4444/pokemon/update', {
+            method: 'POST', 
             headers: {
                 'Accept': 'application/json', 
                 'Content-Type':'application/json'
             },
             body:JSON.stringify({
-                'name':pokemon.name,
-                'type':pokemon.type
+                'pokemontoupdate':pokemon.name,
+                'name':document.getElementById(newname).value
             })
         }
     )

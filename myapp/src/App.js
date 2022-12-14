@@ -1,38 +1,28 @@
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
+
 import ListingPokemon from "./Pages/listingPokemon";
 import ManagePokemon from "./Pages/managePokemon";
 import Pokedex from "./Pages/pokedex";
+import Navbar from './Components/navBar';
 import {
   BrowserRouter as Router,
-  Switch,
-  Link,
-  Route,
+  Route
   } from "react-router-dom";
     
 function App(props) {
   return <Router>
-    <img className="header" src='https://img.freepik.com/vecteurs-premium/ciel-bleu-fond-nuages-altostratus-ciel-dessin-anime-vecteur-nuages-cirrus-concept-toute-banniere-horizon-saisonnier-journee-ensoleillee-au-printemps-ete-matin-fond-horizon-quatre-saisons_39190-1131.jpg' ></img>
-      <div>
-        <nav>
-          <ul>
-              <li><Link to="/ListingPokemon">Liste des Pokemon disponibles</Link></li>
-              <li><Link to="/ManagePokemon">Page pour gerer les pokemons</Link></li>
-              <li><Link to="/Pokedex">Mon pokedex personnel</Link></li>
-          </ul>
-        </nav>
-      </div>
-      <Switch>
-        <Route path="/ListingPokemon">
+        <Navbar />
+        <img style={{marginTop:'40px'}} src="https://www.pokebip.com/membres/galeries/1499/1499864423000762800.png"/>
+        <Route exact path="/">
           <ListingPokemon />
-        </Route>
-        <Route path="/ManagePokemon">
-          <ManagePokemon />
         </Route>
         <Route path="/Pokedex">
           <Pokedex />
         </Route>
-      </Switch>
+        <Route path="/ManagePokemon">
+          <ManagePokemon />
+        </Route> 
   </Router> 
 }
 
